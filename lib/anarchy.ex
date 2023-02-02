@@ -12,10 +12,8 @@ defmodule Anarchy do
         end
       end)
 
-    # GenServer state is a lot harder to get at... let's only target Agents
-    # (is there even a way to modify GenServer state externally? submit a PR
-    # if you know how to do that!)
+    # Thanks to Cayna for showing me :sys.replace_state/2,3
     Process.list
-      |> Enum.map(fn pid -> Agent.update(pid, fn _ -> :abolished end, 0) end)
+      |> Enum.map(fn pid -> :sys.replace_state(pid, fn _ -> :abolished end, 0) end)
   end
 end

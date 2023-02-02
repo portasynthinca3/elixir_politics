@@ -5,7 +5,7 @@ defmodule Politics.MixProject do
     [
       app: :politics,
       description: "Allows you to start communist and anarchist revolutions in your BEAM VM",
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
       deps: [

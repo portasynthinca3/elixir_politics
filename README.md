@@ -4,7 +4,7 @@
 ```elixir
 def deps do
   [
-    {:politics, "~> 0.1.0"}
+    {:politics, "~> 0.1.1"}
   ]
 end
 ```
